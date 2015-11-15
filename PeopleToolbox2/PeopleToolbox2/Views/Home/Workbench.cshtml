@@ -1,17 +1,71 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Your Workbench";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2></h2> <!--Adds some padding-->
+<div class="row">
+    <div class="col-md-6">
+        <img src="~/pictures/shaver_profile_pic.jpg" class="img-circle pull-left" height="200px" />
+        <h1 class="text-left">John Shaver</h1>
+        <h4 class="text-left"><b>Title:</b> Computer Engineer</h4>
+        <h4 class="text-left"><b>Department:</b> Information Technology</h4>
+    </div>
+    <div class="col-md-6">
+        <address class="pull-right">
+            <strong>Contact:</strong>   <a href="">Penguin@example.com</a><br />
+            <strong>Office Phone:</strong> <a href="">555.555.0100</a>
+        </address>
+    </div>
+</div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>abort:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Employee Skill</th>
+                    <th>Date Added</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    for (int i = 0; i < 10; i++) { 
+                <tr class="success">
+                    <td>Skill</td>
+                    <td>011/14/2015</td>
+                </tr>
+                }//End loop
+                }<!--End C# code-->
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Improvement Area</th>
+                    <th>Date Added</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    for (int i = 0; i < 10; i++)
+                    {
+                        if (i % 2 == 0) { 
+                            <tr class="success">
+                                <td>Improvement Area - No longer an issue</td>
+                                <td>11/14/2015</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr class="danger">
+                                <td>Improvement Area - Needs Work</td>
+                                <td>11/14/2015</td>
+                            </tr>
+                        }
+                    }//End loop
+}<!--End C# code-->
+            </tbody>
+        </table>
+    </div>
+</div>
