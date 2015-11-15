@@ -21,13 +21,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("People Toolbox", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <!--The way this method works is it provides a link to the page. The first argument is the text that appears, secont argument is the HTML page
+                        and the third argument is an overload. I believe it points to the folder that the HTML is located in.-->
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Toolbox", "Toolbox", "Home")</li>
+                    <li>@Html.ActionLink("Workbench", "Workbench", "Home")</li>
                     @foreach (var menuItemViewModel in DynamicMVC.Managers.DynamicMVCManager.GetDynamicMenuItems())
                     {
                         <li class="dropdown">

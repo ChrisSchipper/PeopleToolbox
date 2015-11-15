@@ -372,6 +372,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Toolbox.cshtml" />
+    <Content Include="Views\Home\Workbench.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

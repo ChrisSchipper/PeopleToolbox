@@ -15,7 +15,7 @@ namespace PeopleToolbox2.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "People Toolbox Description Page.";
+            ViewBag.Message = "About Us";
 
             return View();
         }
@@ -28,9 +28,16 @@ namespace PeopleToolbox2.Controllers
         }
         public ActionResult Toolbox()
         {
-            ViewBag.Message = "The Toolbox.";
+            ViewBag.Message = "The Toolbox";
+
+            return View();
+        }
+        public ActionResult Workbench()
+        {
+            ViewBag.Message = "The Workbench";
 
             return View();
         }
     }
+    
 }
